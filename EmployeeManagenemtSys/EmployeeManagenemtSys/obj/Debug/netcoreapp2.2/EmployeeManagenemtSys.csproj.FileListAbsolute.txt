@@ -1,0 +1,14 @@
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\bin\Debug\netcoreapp2.2\EmployeeManagenemtSys.deps.json
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\bin\Debug\netcoreapp2.2\EmployeeManagenemtSys.runtimeconfig.json
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\bin\Debug\netcoreapp2.2\EmployeeManagenemtSys.runtimeconfig.dev.json
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\bin\Debug\netcoreapp2.2\EmployeeManagenemtSys.dll
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\bin\Debug\netcoreapp2.2\EmployeeManagenemtSys.pdb
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.csproj.CoreCompileInputs.cache
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.RazorAssemblyInfo.cache
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.RazorAssemblyInfo.cs
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.AssemblyInfoInputs.cache
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.AssemblyInfo.cs
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.RazorTargetAssemblyInfo.cache
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.dll
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.pdb
+F:\Tanbin(C#)\AngularPro\EmployeeManagenemtSys\EmployeeManagenemtSys\obj\Debug\netcoreapp2.2\EmployeeManagenemtSys.csprojAssemblyReference.cache

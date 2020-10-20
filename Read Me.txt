@@ -1,0 +1,11 @@
+//Employee Management System
+//Module: Asp.net Core and Angular
+
+//Submitted By: Tanbin Islam
+//Trainee ID: 1254388
+
+
+//Sign In Credentials
+
+Email: tanbin@gmail.com
+Password: 123456

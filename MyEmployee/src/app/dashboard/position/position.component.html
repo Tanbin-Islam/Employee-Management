@@ -1,0 +1,204 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Position Management</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item active">Positions</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-header">Add New Position</div>
+          <div class="card-body">
+            <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="PtsTitle"
+                  formControlName="PtsTitle"
+                  [class.is-invalid]="PtsTitle.invalid && PtsTitle.touched"
+                />
+                <div *ngIf="PtsTitle.touched && PtsTitle.invalid">
+                  <small *ngIf="PtsTitle.errors?.required" class="text-danger"
+                    >Title field is required</small
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Department</label>
+                <select name="Dept_Id" formControlName="Dept_Id" class="form-control">
+                  <option
+                    *ngFor="let department of departments"
+                    value="{{ department.Dept_Id }}"
+                    >{{ department.DeptName }}</option
+                  >
+                </select>
+                <div *ngIf="Dept_Id.touched && Dept_Id.invalid">
+                  <small *ngIf="Dept_Id.errors?.required" class="text-danger"
+                    >Select department</small
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="">Description</label>
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  name="description"
+                  formControlName="description"
+                  [class.is-invalid]="
+                    description.invalid && description.touched
+                  "
+                ></textarea>
+                <div *ngIf="description.touched && description.invalid">
+                  <small
+                    *ngIf="description.errors?.required"
+                    class="text-danger"
+                    >Plase Add Some Description</small
+                  >
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button
+                  type="submit"
+                  class="btn btn-sm btn-primary"
+                  [disabled]="!postForm.valid"
+                >
+                  <i class="fas fa-plus"></i>&nbsp; Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">DataTable</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Action</th>
+                  <th>Position</th>
+                  <th>Department</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let position of positions; let i = index">
+                  <td>{{ i + 1 }}</td>
+                  <td>
+                    <button
+                      class="btn btn-sm text-info"
+                      (click)="onEdit(position)"
+                      data-toggle="modal"
+                      data-target="#postEdit"
+                    >
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button
+                      (click)="onDelete(position.PstId)"
+                      class="btn btn-sm text-danger"
+                    >
+                      <i class="fa fa-trash"></i>
+                    </button>
+                  </td>
+                  <td>{{ position.PtsTitle }}</td>
+                  <td>{{ position.Department.DeptName }}</td>
+                  <td>{{ position.Description }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="postEdit"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Position</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="postEdit" (ngSubmit)="onUpdate($event)">
+          <input type="hidden" class="form-control" formControlName="id" />
+          <div class="form-group">
+            <label for="">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              name="PtsTitle"
+              formControlName="PtsTitle"
+            />
+          </div>
+          <div class="form-group">
+            <label for="">Department</label>
+            <select formControlName="Department" class="form-control" name="Department">
+              <option
+                *ngFor="let Department of departments"
+                value="{{ Department.id }}"
+                >{{ Department.DeptName }}</option
+              >
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">Description</label>
+            <textarea
+              class="form-control"
+              rows="5"
+              name="Description"
+              formControlName="Description"
+            ></textarea>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-sm btn-primary">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
